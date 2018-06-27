@@ -20,6 +20,8 @@
    * @param {Object} [state]
    */
   function animate(ctx, state) {
+    const w = innerWidth < 672 ? 2 : innerWidth < 1024 ? 1.6 : 1;
+
     state =
       state ||
       Array(rows * cols)
@@ -31,10 +33,7 @@
 
     ctx.clearRect(0, 0, width, height);
 
-    ctx.font = `${Math.min(
-      height / rows / 1.2,
-      width / cols * 2
-    )}px 'Roboto Mono'`;
+    ctx.font = `${height / rows / 1.2}px 'Roboto Mono'`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = '#cce';
@@ -42,7 +41,7 @@
       for (let x = 0; x < cols; x++) {
         ctx.fillText(
           state[x + y * cols],
-          (x + 0.5) * width / cols,
+          (x + 0.5) * width / cols * w,
           (y + 0.5) * height / rows
         );
       }

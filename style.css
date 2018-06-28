@@ -54,3 +54,23 @@ blockquote cite::before {
   margin-left: -2em;
   margin-right: 0.5em;
 }
+
+.two-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.two-col .col {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .two-col {
+    display: block;
+  }
+
+  .two-col .col {
+    width: auto;
+  }
+}

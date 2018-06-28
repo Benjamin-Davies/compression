@@ -10,6 +10,7 @@ section {
   margin: 2rem auto 1rem;
   padding: 0.5rem 2rem;
   width: 80%;
+  max-width: 1024px;
 }
 
 header {
@@ -28,7 +29,6 @@ header canvas.header-canvas {
   width: 100%;
   height: 100%;
   z-index: -1;
-  max-width: 1024px;
 }
 
 section {

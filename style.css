@@ -5,7 +5,8 @@ body {
 }
 
 header,
-section {
+section,
+footer {
   box-sizing: border-box;
   margin: 2rem auto 1rem;
   padding: 0.5rem 2rem;
@@ -36,6 +37,10 @@ section {
   border-radius: 3px;
   box-shadow: #333 0 0.1rem 1rem;
   text-justify: distribute;
+}
+
+footer {
+  text-align: center;
 }
 
 h1,
